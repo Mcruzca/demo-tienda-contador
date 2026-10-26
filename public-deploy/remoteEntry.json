@@ -1,7 +1,0 @@
-{
-  "name": "contador",
-  "shared": [],
-  "exposes": [
-    { "key": "./Widget", "outFileName": "src/widget.js" }
-  ]
-}
