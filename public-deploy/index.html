@@ -1,0 +1,12 @@
+<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contador · JS</title>
+<body style="font-family:system-ui;max-width:850px;margin:40px auto;padding:20px">
+<h1>Contador sin Angular ni shell</h1>
+<p>Este botón hace lo mismo que el carrito: lanza el aviso <code>tienda:carrito-cambio</code>.</p>
+<button id="simular">Simular aviso del carrito (5 productos)</button>
+<tienda-contador></tienda-contador>
+<script type="module" src="./src/widget.js"></script>
+<script>
+document.getElementById('simular').onclick = () =>
+  window.dispatchEvent(new CustomEvent('tienda:carrito-cambio', { detail: { cantidad: 5 } }));
+</script>
+</body></html>
